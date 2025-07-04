@@ -15,6 +15,7 @@ Created app using:
 bash
 
 express myapp
+
 After creating the app:
 
 bash
@@ -22,18 +23,22 @@ bash
 cd myapp
 npm install
 npm start
+
 🛢️ 2. MongoDB & Mongoose.js
+
 Install Mongoose:
 
 bash
 
 npm install mongoose
+
 Connect to MongoDB:
 
 js
-Copy code
+
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/practicedb');
+
 Schema & Model:
 
 js
@@ -41,12 +46,15 @@ js
 const userSchema = new mongoose.Schema({ name: String });
 const User = mongoose.model('User', userSchema);
 module.exports = User;
+
 🔐 3. Sessions
+
 Install:
 
 bash
 Copy code
 npm install express-session
+
 Setup in app.js:
 
 js
@@ -57,6 +65,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
+
 Usage:
 
 Set: req.session.key = value
@@ -66,6 +75,7 @@ Read: req.session.key
 Delete: req.session.destroy()
 
 🍪 4. Cookies
+
 cookie-parser is already installed by Express Generator.
 
 Usage:
@@ -77,13 +87,16 @@ Read: req.cookies.name
 Delete: res.clearCookie('name')
 
 🚀 How to Run
+
 bash
 
 git clone <repo-url>
 cd practicedb
 npm install
 npm start
+
 🎯 Purpose
+
 This app was created for learning and practicing:
 
 Express app structure
@@ -93,6 +106,7 @@ MongoDB connections and models
 Session & cookie handling
 
 🛠 Tech Stack
+
 Node.js
 
 Express.js
